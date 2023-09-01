@@ -21,7 +21,7 @@ admin.initializeApp({
 });
 
 mongoose.connect(
-  `mongodb+srv://${username}:${password}@cluster0.uttybej.mongodb.net/${database}?retryWrites=true&w=majority`,
+  process.env.MONGODB_URI,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
